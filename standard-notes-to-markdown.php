@@ -91,22 +91,47 @@ Standard Note Tag titles contain a dot `.` if a paid account (called "Extended")
 
 
 
-// Require Args
-if(!isset($argv[1])) { 
-	echo 'Error: Need to pass the Standard Notes file path as argument/parameter 1'; 
-	exit;
+function yaml_escape_scalar($value) {
+	$normalized = str_replace(array("\r\n", "\r"), "\n", (string)$value);
+	return '"'.str_replace(array('\\', '"', "\n"), array('\\\\', '\\"', '\\n'), $normalized).'"';
 }
-else $sn_file = file_get_contents($argv[1]);
+
+// Require Args
+if(!isset($argv[1])) {
+	echo 'Error: Need to pass the Standard Notes file path as argument/parameter 1';
+	exit(1);
+}
+
+$input_path = $argv[1];
+if(!is_file($input_path) || !is_readable($input_path)) {
+	echo 'Error: Input file does not exist or is not readable.';
+	exit(1);
+}
+
+$sn_file = file_get_contents($input_path);
+if($sn_file === false) {
+	echo 'Error: Failed to read input file.';
+	exit(1);
+}
 
 if(!isset($argv[2])) $export_path = __DIR__.'/notes/';
-else $export_path = __DIR__.trim($argv[2]);
+else {
+	$requested_export_path = trim($argv[2]);
+	$export_path = preg_match('/^\//', $requested_export_path)
+		? $requested_export_path
+		: __DIR__.'/'.$requested_export_path;
+	$export_path = rtrim($export_path, '/').'/';
+}
 
 // sanity
 if(file_exists($export_path)) {
 	echo 'Error: Export path already exists! We don\'t want to overwrite anything... Delete it or choose another path.';
-	exit;
+	exit(1);
 }
-else mkdir($export_path);
+elseif(!mkdir($export_path, 0700, true)) {
+	echo 'Error: Could not create export path.';
+	exit(1);
+}
 
 
 $notes = array();
@@ -120,12 +145,12 @@ foreach($sn_json['items'] as $sn_item) {
 	if($sn_item['content_type'] == 'Note') {
 		
 		// can only really be one or the other as they're locations, right? We'll handle "pinned" later
-		if(@$sn_item['content']['appData']['org.standardnotes.sn']['trashed'] == true) {
-			$sn_note_status = 'trashed';
-		}
-		elseif(@$sn_item['content']['appData']['org.standardnotes.sn']['archived'] == true) {
-			$sn_note_status = 'archived';
-		}
+			if(isset($sn_item['content']['appData']['org.standardnotes.sn']['trashed']) && $sn_item['content']['appData']['org.standardnotes.sn']['trashed'] == true) {
+				$sn_note_status = 'trashed';
+			}
+			elseif(isset($sn_item['content']['appData']['org.standardnotes.sn']['archived']) && $sn_item['content']['appData']['org.standardnotes.sn']['archived'] == true) {
+				$sn_note_status = 'archived';
+			}
 		else $sn_note_status = false;
 
 		// 🖖 Beam me up, Miles O'Brien
@@ -137,7 +162,7 @@ foreach($sn_json['items'] as $sn_item) {
 		
 
 		// pinned? Treat as an attribute not location/status.
-		if(@$sn_item['content']['appData']['org.standardnotes.sn']['pinned'] == true) $notes[$sn_item['uuid']]['tags']['pinned'] = true;
+			if(isset($sn_item['content']['appData']['org.standardnotes.sn']['pinned']) && $sn_item['content']['appData']['org.standardnotes.sn']['pinned'] == true) $notes[$sn_item['uuid']]['tags']['pinned'] = true;
 
 	}
 
@@ -209,17 +234,17 @@ foreach ($notes as $note_uuid => $note_data) {
 		if(!empty($note_data['tags'])) {
 			$note_tags_yaml = "tags:\n";
 			foreach ($note_data['tags'] as $note_tag_title => $value) {
-				$note_tags_yaml .= "  - $note_tag_title\n";
-			}
+					$note_tags_yaml .= "  - ".yaml_escape_scalar($note_tag_title)."\n";
+				}
 
 		}
 		else $note_tags_yaml = '';
 
-		if(isset($note_data['status'])) $note_status_yaml = "status: $note_data[status]\n";
-		else $note_status_yaml = '';
+			if(isset($note_data['status'])) $note_status_yaml = "status: ".yaml_escape_scalar($note_data['status'])."\n";
+			else $note_status_yaml = '';
 
-		// manual note YAML
-		$note_yaml = "---\ntitle: $note_data[title]\ncreated: $note_data[created_at]\nuuid: $note_uuid\nid: $note_id\n$note_tags_yaml$note_status_yaml---\n\n";
+			// manual note YAML
+			$note_yaml = "---\ntitle: ".yaml_escape_scalar($note_data['title'])."\ncreated: ".yaml_escape_scalar($note_data['created_at'])."\nuuid: ".yaml_escape_scalar($note_uuid)."\nid: ".yaml_escape_scalar($note_id)."\n$note_tags_yaml$note_status_yaml---\n\n";
 
 		$filename = preg_replace("([^\w\s\d\-_~,;\[\]\(\).])", '-', $note_data['title'])." $note_id.md";
 		$note_content = $note_yaml.$note_data['sn_content'];
