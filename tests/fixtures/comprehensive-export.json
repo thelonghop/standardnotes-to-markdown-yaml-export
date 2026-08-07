@@ -1,0 +1,511 @@
+{
+  "version": "004",
+  "items": [
+    {
+      "uuid": "10000000-0000-4000-8000-000000000001",
+      "content_type": "Tag",
+      "content": {
+        "title": "Projects",
+        "references": []
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000002",
+      "content_type": "Tag",
+      "content": {
+        "title": "Research",
+        "references": [
+          {"uuid": "10000000-0000-4000-8000-000000000001", "content_type": "Tag", "reference_type": "TagToParentTag"},
+          {"uuid": "20000000-0000-4000-8000-000000000001", "content_type": "Note"},
+          {"uuid": "20000000-0000-4000-8000-000000000002", "content_type": "Note"},
+          {"uuid": "20000000-0000-4000-8000-000000000011", "content_type": "Note"},
+          {"uuid": "20000000-0000-4000-8000-000000000013", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000003",
+      "content_type": "Tag",
+      "content": {
+        "title": "Deep",
+        "references": [
+          {"uuid": "10000000-0000-4000-8000-000000000002", "content_type": "Tag", "reference_type": "TagToParentTag"},
+          {"uuid": "20000000-0000-4000-8000-000000000012", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000004",
+      "content_type": "Tag",
+      "content": {
+        "title": "Alpha.Beta",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000003", "content_type": "Note"},
+          {"uuid": "20000000-0000-4000-8000-000000000013", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000005",
+      "content_type": "Tag",
+      "content": {
+        "title": "Standalone",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000004", "content_type": "Note"},
+          {"uuid": "20000000-0000-4000-8000-000000000012", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000006",
+      "content_type": "Tag",
+      "content": {
+        "title": ".Broken",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000005", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000007",
+      "content_type": "Tag",
+      "content": {
+        "title": "keyword",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000007", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000008",
+      "content_type": "Tag",
+      "content": {
+        "title": "../../Escape",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000008", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000009",
+      "content_type": "Tag",
+      "content": {
+        "title": "Same.One",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000009", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000010",
+      "content_type": "Tag",
+      "content": {
+        "title": "Same.Two",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000010", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000011",
+      "content_type": "Tag",
+      "content": {
+        "title": "Meta \"Tag\"\nΩ",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000014", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000012",
+      "content_type": "Tag",
+      "content": {
+        "title": "Archive.Top",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000015", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000013",
+      "content_type": "Tag",
+      "content": {
+        "title": "Trash.Top",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000016", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000014",
+      "content_type": "Tag",
+      "content": {
+        "title": "Pinned",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000017", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000015",
+      "content_type": "Tag",
+      "content": {
+        "title": "Rich",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000018", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000016",
+      "content_type": "Tag",
+      "content": {
+        "title": "Duplicates",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000019", "content_type": "Note"},
+          {"uuid": "20000000-0000-4000-8000-000000000022", "content_type": "Note"},
+          {"uuid": "20000000-0000-4000-8000-000000000023", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000017",
+      "content_type": "Tag",
+      "content": {
+        "title": "Long",
+        "references": [
+          {"uuid": "20000000-0000-4000-8000-000000000020", "content_type": "Note"}
+        ]
+      }
+    },
+    {
+      "uuid": "10000000-0000-4000-8000-000000000099",
+      "content_type": "Tag",
+      "content": {
+        "title": "Orphan Reference",
+        "references": [
+          {"uuid": "29999999-0000-4000-8000-000000000099", "content_type": "Note"}
+        ]
+      }
+    },
+
+    {
+      "uuid": "20000000-0000-4000-8000-000000000001",
+      "content_type": "Note",
+      "content": {
+        "title": "Meeting",
+        "text": "FIRST-CHARACTER-MARKER\n# Fictional meeting\n\n- Invented item\n",
+        "noteType": "markdown",
+        "editorIdentifier": "org.standardnotes.advanced-markdown",
+        "references": [],
+        "appData": {"org.standardnotes.sn": {"client_updated_at": "2024-01-02T03:04:05.000Z"}}
+      },
+      "created_at": "2024-01-01T03:04:05.000Z",
+      "updated_at": "2024-01-02T03:04:05.000Z",
+      "duplicate_of": null
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000002",
+      "content_type": "Note",
+      "content": {
+        "title": "Meeting",
+        "text": "SECOND-COLLISION-BODY\n",
+        "references": [],
+        "appData": {"org.standardnotes.sn": {"client_updated_at": "2024-01-03T03:04:05.000Z"}}
+      },
+      "created_at": "2024-01-02T03:04:05.000Z",
+      "updated_at": "2024-01-03T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000003",
+      "content_type": "Note",
+      "content": {
+        "title": "User Frontmatter",
+        "text": "---\nuser-owned: true\n---\nThis delimiter belongs to the fictional user.\n",
+        "references": []
+      },
+      "created_at": "2024-01-03T03:04:05.000Z",
+      "updated_at": "2024-01-04T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000004",
+      "content_type": "Note",
+      "content": {
+        "title": "Café 🚀",
+        "text": "UNICODE-BODY-MARKER: Καλημέρα 🌍 café\n",
+        "references": []
+      },
+      "created_at": "2024-01-04T03:04:05.000Z",
+      "updated_at": "2024-01-05T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000005",
+      "content_type": "Note",
+      "content": {
+        "title": "",
+        "text": "BLANK-TITLE-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-05T03:04:05.000Z",
+      "updated_at": "2024-01-06T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000006",
+      "content_type": "Note",
+      "content": {
+        "title": "Empty Body",
+        "text": "",
+        "references": []
+      },
+      "created_at": "2024-01-06T03:04:05.000Z",
+      "updated_at": "2024-01-07T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000007",
+      "content_type": "Note",
+      "content": {
+        "title": "Bad <>:\"/\\|?* Name",
+        "text": "INVALID-FILENAME-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "not-a-date",
+      "updated_at": "also-not-a-date"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000008",
+      "content_type": "Note",
+      "content": {
+        "title": "CON",
+        "text": "RESERVED-AND-TRAVERSAL-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-08T03:04:05.000Z",
+      "updated_at": "2024-01-09T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000009",
+      "content_type": "Note",
+      "content": {
+        "title": "Shared Title.   ",
+        "text": "TRAILING-NAME-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-09T03:04:05.000Z",
+      "updated_at": "2024-01-10T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000010",
+      "content_type": "Note",
+      "content": {
+        "title": "Shared Title",
+        "text": "SAME-TITLE-SEPARATE-FOLDER-A\n",
+        "references": []
+      },
+      "created_at": "2024-01-10T03:04:05.000Z",
+      "updated_at": "2024-01-11T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000011",
+      "content_type": "Note",
+      "content": {
+        "title": "Shared Title",
+        "text": "SAME-TITLE-SEPARATE-FOLDER-B\n",
+        "references": []
+      },
+      "created_at": "2024-01-11T03:04:05.000Z",
+      "updated_at": "2024-01-12T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000012",
+      "content_type": "Note",
+      "content": {
+        "title": "Deep Choice",
+        "text": "DEEPEST-CANDIDATE-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-12T03:04:05.000Z",
+      "updated_at": "2024-01-13T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000013",
+      "content_type": "Note",
+      "content": {
+        "title": "Alphabetical Choice",
+        "text": "ALPHABETICAL-TIE-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-13T03:04:05.000Z",
+      "updated_at": "2024-01-14T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000014",
+      "content_type": "Note",
+      "content": {
+        "title": "Manifest \"Quote\"\nLine Ω",
+        "text": "MANIFEST-ESCAPING-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-14T03:04:05.000Z",
+      "updated_at": "2024-01-15T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000015",
+      "content_type": "Note",
+      "content": {
+        "title": "Archived Note",
+        "text": "ARCHIVED-BODY-MARKER\n",
+        "references": [],
+        "appData": {"org.standardnotes.sn": {"archived": true, "client_updated_at": "2024-01-16T03:04:05.000Z"}}
+      },
+      "created_at": "2024-01-15T03:04:05.000Z",
+      "updated_at": "2024-01-16T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000016",
+      "content_type": "Note",
+      "content": {
+        "title": "Trashed Note",
+        "text": "TRASHED-BODY-MARKER\n",
+        "trashed": true,
+        "references": []
+      },
+      "created_at": "2024-01-16T03:04:05.000Z",
+      "updated_at": "2024-01-17T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000017",
+      "content_type": "Note",
+      "content": {
+        "title": "Pinned Note",
+        "text": "PINNED-BODY-MARKER\n",
+        "references": [],
+        "appData": {"org.standardnotes.sn": {"pinned": true, "client_updated_at": "2024-01-18T03:04:05.000Z"}}
+      },
+      "created_at": "2024-01-17T03:04:05.000Z",
+      "updated_at": "2024-01-18T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000018",
+      "content_type": "Note",
+      "content": {
+        "title": "Rich Fiction",
+        "text": "<p>RICH-EDITOR-BODY-MARKER <strong>unchanged</strong></p>\n",
+        "noteType": "rich-text",
+        "editorIdentifier": "org.standardnotes.bold-editor",
+        "references": []
+      },
+      "created_at": "2024-01-18T03:04:05.000Z",
+      "updated_at": "2024-01-19T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000019",
+      "content_type": "Note",
+      "content": {
+        "title": "Repeated Record",
+        "text": "REPEATED-UUID-VARIANT-A\n",
+        "references": []
+      },
+      "created_at": "2024-01-19T03:04:05.000Z",
+      "updated_at": "2024-01-20T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000019",
+      "content_type": "Note",
+      "content": {
+        "title": "Repeated Record",
+        "text": "REPEATED-UUID-VARIANT-B\n",
+        "references": []
+      },
+      "created_at": "2024-01-19T03:04:05.000Z",
+      "updated_at": "2024-01-21T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000020",
+      "content_type": "Note",
+      "content": {
+        "title": "This is an entirely fictional and intentionally extremely long title used to verify that portable filenames are shortened without losing the note body and without allowing a filesystem component to grow beyond a reasonable cross-platform length 0123456789",
+        "text": "LONG-TITLE-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-20T03:04:05.000Z",
+      "updated_at": "2024-01-21T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000021",
+      "content_type": "Note",
+      "content": {
+        "title": "No Tags",
+        "text": "UNFILED-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-21T03:04:05.000Z",
+      "updated_at": "2024-01-22T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000022",
+      "content_type": "Note",
+      "content": {
+        "title": "Exact Repeat",
+        "text": "EXACT-REPEAT-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-22T03:04:05.000Z",
+      "updated_at": "2024-01-23T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000022",
+      "content_type": "Note",
+      "content": {
+        "title": "Exact Repeat",
+        "text": "EXACT-REPEAT-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-22T03:04:05.000Z",
+      "updated_at": "2024-01-23T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000023",
+      "content_type": "Note",
+      "content": {
+        "title": "Duplicate Relationship",
+        "text": "DUPLICATE-OF-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-23T03:04:05.000Z",
+      "updated_at": "2024-01-24T03:04:05.000Z",
+      "duplicate_of": "20000000-0000-4000-8000-000000000001"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000024",
+      "content_type": "Note",
+      "content": {
+        "title": "Missing Tag Reference",
+        "text": "MISSING-TAG-REFERENCE-BODY-MARKER\n",
+        "references": [
+          {"uuid": "19999999-0000-4000-8000-000000000099", "content_type": "Tag"}
+        ]
+      },
+      "created_at": "2024-01-24T03:04:05.000Z",
+      "updated_at": "2024-01-25T03:04:05.000Z"
+    },
+    {
+      "uuid": "20000000-0000-4000-8000-000000000025",
+      "content_type": "Note",
+      "content": {
+        "references": []
+      },
+      "created_at": "2024-01-25T03:04:05.000Z",
+      "updated_at": "2024-01-26T03:04:05.000Z"
+    },
+    {
+      "content_type": "Note",
+      "content": {
+        "title": "Missing UUID",
+        "text": "MISSING-UUID-BODY-MARKER\n",
+        "references": []
+      },
+      "created_at": "2024-01-26T03:04:05.000Z",
+      "updated_at": "2024-01-27T03:04:05.000Z"
+    }
+  ]
+}
