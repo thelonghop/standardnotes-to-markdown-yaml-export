@@ -1,0 +1,37 @@
+# Decrypted Standard Notes backups (common names and recommended suffixes)
+Standard Notes Backup and Import File*.txt
+Standard Notes Backup and Import File*.json
+Standard Notes Decrypted Backup*.txt
+Standard Notes Decrypted Backup*.json
+standard-notes-backup*.txt
+standard-notes-backup*.json
+*.sn-decrypted.txt
+*.sn-decrypted.json
+decrypted-*.txt
+decrypted-*.json
+*.zip
+
+# Generated vaults and test output
+/notes/
+/vault/
+/output/
+/exports/
+/generated-vaults/
+/test-output/
+/tests/tmp/
+_standardnotes-export-manifest.json
+
+# Exporter staging directories
+.*.standardnotes-staging-*
+*.standardnotes-staging-*
+
+# Operating-system and editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo
+*.tmp
+.idea/
+.vscode/
